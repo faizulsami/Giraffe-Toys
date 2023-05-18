@@ -7,7 +7,7 @@ const Header = () => {
             <Navbar
             fluid={true}
             
-            className='p-0 bg-primary container mx-auto rounded-3xl'
+            className='p-0 color container mx-auto rounded-3xl'
         >
             <Navbar.Brand
             >
