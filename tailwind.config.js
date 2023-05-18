@@ -11,6 +11,9 @@ export default {
         'primary':'#F2F2F2'
       }
     },
+    fontFamily:{
+      custom:["Nunito","sans-serif"]
+    }
   },
   plugins: [
     require('flowbite/plugin')

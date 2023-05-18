@@ -12,6 +12,7 @@ const PrivateRoute = ({children}) => {
         return <Spinner
         color="warning"
         aria-label="Warning spinner example"
+        className='mx-auto container'
     />
     }
     if (user) {
