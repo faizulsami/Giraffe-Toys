@@ -1,13 +1,13 @@
-import { Button, Navbar } from "flowbite-react";
+import { Navbar } from "flowbite-react";
 import { Link } from "react-router-dom";
 import logo from '../../../images/Beige Giraffe Toys Kids Shop Logo.png'
 
 const Header = () => {
     return (
-        <Navbar
+            <Navbar
             fluid={true}
-            rounded={true}
-            className='p-0 container mx-auto bg-[#F2F2F2] rounded-3xl'
+            
+            className='p-0 bg-primary container mx-auto rounded-3xl'
         >
             <Navbar.Brand
             >
@@ -24,9 +24,9 @@ const Header = () => {
                 <Link to='/blog' className='lg:text-xl ms-3'>
                     Blog
                 </Link>
-                <Button className='lg:relative lg:bottom-1 lg:text-xl bg-[#FCE2AD]'>
-                    <Link to='/login'>Login</Link>
-                </Button>
+                <button type="button" className="text-white bg-[#FCE2AD] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-[#FCE2AD] dark:hover:bg-[#FCE2AD]">
+                <Link to='/login'>Login</Link>
+                </button>
             </Navbar.Collapse>
         </Navbar>
     );

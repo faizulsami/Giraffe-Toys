@@ -3,8 +3,8 @@ import logo from '../../../images/Beige Giraffe Toys Kids Shop Logo.png'
 
 const FooTer = () => {
     return (
-        <Footer container={true} className='container mx-auto mt-2 lg:mt-20 shadow-xl bg-[#F2F2F2]'>
-            <div className="w-full text-center font-abc">
+        <Footer container={true} className='container mx-auto mt-2 lg:mt-20 shadow-xl bg-primary'>
+            <div className="w-full text-center">
                 <div className="w-full justify-between flex items-center">
                     <img src={logo} className='lg:w-20 w-12 rounded-full'/>
                     <Footer.LinkGroup className='gap-2'>
