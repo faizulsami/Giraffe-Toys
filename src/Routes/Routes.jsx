@@ -5,12 +5,13 @@ import Blog from "../Pages/Blog/Blog";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../Pages/Home/Home";
+import Error from "../Pages/Error/Error";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
-        
+        errorElement:<Error></Error>,
         children:[
             {
                 path:'/',
