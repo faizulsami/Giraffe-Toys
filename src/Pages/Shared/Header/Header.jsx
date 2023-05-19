@@ -28,19 +28,19 @@ const Header = () => {
             <Navbar.Toggle />
             <Navbar.Collapse>
                 <ActiveLink to='/' >
-                    <span className='lg:text-xl ms-3'>Home</span>
+                    <span className='lg:text-xl ms-3 lg:relative lg:top-1'>Home</span>
                 </ActiveLink>
                 <ActiveLink to='....'>
-                    <span className='lg:text-xl ms-3'>All Toys</span>
+                    <span className='lg:text-xl ms-3 lg:relative lg:top-1'>All Toys</span>
                 </ActiveLink>
                 <ActiveLink to='...'>
-                    <span className='lg:text-xl ms-3'>My Toys</span>
+                    <span className='lg:text-xl ms-3 lg:relative lg:top-1'>My Toys</span>
                 </ActiveLink>
                 <ActiveLink to='......'>
-                    <span className='lg:text-xl ms-3'>Add A Toy</span>
+                    <span className='lg:text-xl ms-3 lg:relative lg:top-1'>Add A Toy</span>
                 </ActiveLink>
                 <ActiveLink to='/blog'>
-                    <span className='lg:text-xl ms-3'>Blogs</span>
+                    <span className='lg:text-xl ms-3 lg:relative lg:top-1'>Blogs</span>
                 </ActiveLink>
                 {user ? <>
                     <Avatar className="lg:mb-3 me-80 my-2 lg:me-0 lg:my-0" alt="User settings" img={user?.photoURL} rounded={true} />
