@@ -3,6 +3,8 @@ import { AiOutlineWechat } from 'react-icons/ai';
 import { BsFillBoxSeamFill } from 'react-icons/bs';
 import { RiVisaFill } from 'react-icons/ri';
 import { FaShippingFast } from 'react-icons/fa';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 import banner1 from '../../images/banner1.png'
 import banner2 from '../../images/banner2.gif'
 import banner3 from '../../images/banner3.gif'
@@ -18,10 +20,12 @@ import pic9 from '../../images/gell9.jpg'
 import pic10 from '../../images/gell10.jpg'
 import pic11 from '../../images/gell11.jpg'
 import pic12 from '../../images/gell12.jpg'
+import { Button } from 'flowbite-react';
 
 const Home = () => {
     return (
         <div className='container mx-auto'>
+            {/* Banner Part */}
             <div className=" lg:grid grid-cols-12 lg:gap-5 lg:mt-10 mt-3">
                 {/* 1st div */}
                 <div className="col-span-8 to-yellow-500">
@@ -40,6 +44,64 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            {/* Tab Container */}
+            <Tabs className='lg:mt-5'>
+                <TabList>
+                    <Tab>Trucks</Tab>
+                    <Tab>Sports Cars</Tab>
+                    <Tab>Sedans</Tab>
+                </TabList>
+
+                <TabPanel>
+                    <h2>Any content 1</h2>
+                </TabPanel>
+                <TabPanel>
+                    <h2>Any content 2</h2>
+                </TabPanel>
+            </Tabs>
+            {/* Section 2nd */}
+            <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {/* 1st div */}
+                <div className="bg-[#FCE2AD] rounded-xl">
+                    <div className="flex">
+                        <div className="p-3 md:pt-32 text-center">
+                            <h2 className="text-xl md:text-2xl text-[#DC5C33] font-bold">Sparing Sales </h2>
+                            <h1 className="text-3xl text-white font-bold">All Type of  Sports Cars <span className='text-[#DC5C33]'>50%</span> OFF !</h1>
+                            <div className="ps-10 md:ps-16 pt-3 md:pt-6">  <Button  className='bg-[#25779C]'>SHOP NOW  </Button></div>
+                        </div>
+                        <div className="w-96 pt-20">
+                            <img src="https://i.ibb.co/0rFP6Hj/model-car-2731662-960-720-removebg-preview.png" className='animate-bounce duration-50
+                            0' />
+                        </div>
+                    </div>
+                </div>
+
+                {/* 2nd div */}
+                <div className="flex bg-[#FCE2AD] rounded-xl">
+                    <div className="p-3 md:pt-24 text-center">
+                        <h2 className="text-xl md:text-2xl text-[#DC5C33] font-bold">Sparing Sales </h2>
+                        <h1 className="text-3xl  text-white font-bold">All Type of SUV Toy Cars <span className='text-[#DC5C33]'>35%</span> OFF !</h1>
+                        <div className="ps-10 md:ps-14 pt-3 md:pt-6">  <Button  className='bg-[#25779C]'>SHOP NOW  </Button></div>
+                    </div>
+                    <div>
+                        <img src="https://i.ibb.co/zrWNL71/car-63930-960-720-removebg-preview.png" className='animate-pulse' alt="" />
+                    </div>
+                </div>
+                {/* 3rd div */}
+                <div  className="flex bg-[#FCE2AD] rounded-xl">
+                <div className="p-3 md:pt-24 text-center">
+                        <h2 className="text-xl md:text-2xl font-bold text-[#DC5C33]">Sparing Sales </h2>
+                        <h1 className="text-3xl  text-white font-bold">All Type of SUV Toy Cars <span className='text-[#DC5C33]'>45%</span> OFF !</h1>
+                        <div className="ps-10 md:ps-14 pt-3 md:pt-6">  <Button  className='bg-[#25779C]' >SHOP NOW  </Button></div>
+                    </div>
+                    <div className="pt-10 ">
+                        <img src="https://i.ibb.co/d2Syq34/toys-1064262-960-720-removebg-preview.png" className='animate-bounce' alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+            {/*Payment Details Section*/}
             <div className="lg:flex ps-14  justify-around lg:mt-10 bg-primary py-20 pt-28 lg:rounded-3xl">
                 <div className="flex mb-8">
                     <div>
@@ -75,7 +137,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
+            {/* Gallery Section */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 lg:mt-10">
                 <div className="grid gap-4">
                     <div>
@@ -122,7 +184,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
