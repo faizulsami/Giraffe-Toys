@@ -33,10 +33,10 @@ const Header = () => {
                 <ActiveLink to='....'>
                     <span className='lg:text-xl ms-3 lg:relative lg:top-1'>All Toys</span>
                 </ActiveLink>
-                <ActiveLink to='...'>
+                <ActiveLink to='/myToys'>
                     <span className='lg:text-xl ms-3 lg:relative lg:top-1'>My Toys</span>
                 </ActiveLink>
-                <ActiveLink to='addToy'>
+                <ActiveLink to='/addToy'>
                     <span className='lg:text-xl ms-3 lg:relative lg:top-1'>Add A Toy</span>
                 </ActiveLink>
                 <ActiveLink to='/blog'>

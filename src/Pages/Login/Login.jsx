@@ -1,7 +1,7 @@
 import './Login.css'
 import img from '../../images/img.svg'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { BsGoogle } from 'react-icons/bs';
+import { FcGoogle } from 'react-icons/fc';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 const Login = () => {
@@ -71,7 +71,7 @@ const Login = () => {
                         <span className="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">or</span>
                     </div>
                     <button onClick={handleGoogleLogin}>
-                    <BsGoogle className='w-12'/>
+                    <FcGoogle/>
                     </button>
                 </div>
             </section>

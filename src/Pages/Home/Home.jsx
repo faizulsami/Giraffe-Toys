@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AiOutlineWechat } from 'react-icons/ai';
 import { BsFillBoxSeamFill } from 'react-icons/bs';
 import { RiVisaFill } from 'react-icons/ri';
@@ -26,6 +26,18 @@ import Cards from './Cards';
 
 const Home = () => {
     const [data, setToys] = useState([]);
+    useEffect(()=>{
+        fetch('https://assignment-11-server-eight-eosin.vercel.app/categoryTab?category=Trucks', {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                setToys(data);
+            })
+    },[]);
     const handleCategory = event => {
         const category = event.target.innerText;
         console.log(category);
