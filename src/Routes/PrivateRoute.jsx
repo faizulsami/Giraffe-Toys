@@ -2,6 +2,7 @@ import { Spinner } from 'flowbite-react';
 import { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
+import LoaderPage from '../Pages/LoaderPage/LoaderPage';
 
 
 const PrivateRoute = ({children}) => {
@@ -9,11 +10,7 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
     console.log(location);
     if (loading) {
-        return <Spinner
-        color="warning"
-        aria-label="Warning spinner example"
-        className='mx-auto container'
-    />
+        return <LoaderPage></LoaderPage>;
     }
     if (user) {
         return children;
