@@ -2,6 +2,7 @@ import React from 'react';
 
 const AddAToy = () => {
     return (
+        // 
         <div className='container mx-auto my-5'>
             <div className="color rounded-2xl p-24">
             <h2 className="text-3xl font-extrabold text-center mb-6">Add A Toy</h2>
