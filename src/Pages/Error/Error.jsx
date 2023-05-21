@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
 import './Error.css'
+import { Helmet } from 'react-helmet-async';
 const Error = () => {
     return (
         <section className="page_404">
+            <Helmet>
+                <title>Error</title>
+            </Helmet>
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12 ">

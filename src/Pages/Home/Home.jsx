@@ -21,6 +21,7 @@ import pic10 from '../../images/gell10.jpg'
 import pic11 from '../../images/gell11.jpg'
 import pic12 from '../../images/gell12.jpg'
 import Cards from './Cards';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -54,6 +55,9 @@ const Home = () => {
     }
     return (
         <div className='container mx-auto'>
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
             {/* Banner Part */}
             <div className=" lg:grid grid-cols-12 lg:gap-5 lg:mt-10 mt-3">
                 {/* 1st div */}

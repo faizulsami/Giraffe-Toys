@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import img from '../../images/img.svg'
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 const Register = () => {
     const {createUser,updateUserProfile} = useContext(AuthContext);
     const [error,setError] = useState('')
@@ -27,6 +28,9 @@ const Register = () => {
     }
     return (
         <div className='body container'>
+            <Helmet>
+                <title>Register</title>
+            </Helmet>
             <section className="side">
                 <img src={img} alt="" />
             </section>

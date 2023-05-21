@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const MyToys = () => {
     const {user} = useContext(AuthContext);
@@ -19,6 +20,9 @@ const MyToys = () => {
     },[user]);
     return (
         <div className="container mx-auto">
+            <Helmet>
+                <title>My Toys</title>
+            </Helmet>
             <div className="relative overflow-x-auto mt-5">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase color4 dark:text-gray-400">

@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 const Login = () => {
     const {googlePopup,signIn} = useContext(AuthContext);
     const [error,setError] = useState('')
@@ -43,6 +44,9 @@ const Login = () => {
     
     return (
         <div className='body container'>
+            <Helmet>
+                <title>Login</title>
+            </Helmet>
             <section className="side">
                 <img src={img} alt="" />
             </section>

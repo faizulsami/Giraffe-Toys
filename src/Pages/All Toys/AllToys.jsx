@@ -1,11 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const AllToys = () => {
     const allToys = useLoaderData();
     const [search, setSearch] = useState('');
     return (
         <div className='container mx-auto mt-5'>
+            <Helmet>
+                <title>All Toys</title>
+            </Helmet>
             <div className="input-group flex justify-end">
                 <input onChange={(e) => setSearch(e.target.value)} type="text" placeholder="Search…" className="input input-bordered w-56 color" />
                 <button className="btn btn-square ms-3 relative">
