@@ -7,6 +7,8 @@ import PrivateRoute from "./PrivateRoute";
 import Home from "../Pages/Home/Home";
 import Error from "../Pages/Error/Error";
 import AddAToy from "../Pages/Add A Toy/AddAToy";
+import AllToys from "../Pages/All Toys/AllToys";
+import MyToys from "../Pages/My Toys/MyToys";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +27,16 @@ const router = createBrowserRouter([
             {
                 path:'addToy',
                 element:<AddAToy></AddAToy>
+            },
+            {
+                path:'myToys',
+                element:<MyToys></MyToys>,
+                loader: () => fetch('https://assignment-11-server-eight-eosin.vercel.app/myToys')
+            },
+            {
+                path:'allToys',
+                element:<AllToys></AllToys>,
+                loader: () => fetch('https://assignment-11-server-eight-eosin.vercel.app/allToys')
             },
             {
                 path:'login',

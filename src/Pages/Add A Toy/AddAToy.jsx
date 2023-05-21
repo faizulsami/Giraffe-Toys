@@ -32,6 +32,7 @@ const AddAToy = () => {
         .then(data => {
             console.log(data);
         })
+        form.reset();
     }
     return (
         <div className='container mx-auto my-5'>
