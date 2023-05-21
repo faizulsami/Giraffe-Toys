@@ -9,6 +9,7 @@ import Error from "../Pages/Error/Error";
 import AddAToy from "../Pages/Add A Toy/AddAToy";
 import AllToys from "../Pages/All Toys/AllToys";
 import MyToys from "../Pages/My Toys/MyToys";
+import View_Details from "../Pages/View Details/View_Details";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
             {
                 path:'blog',
                 element:<PrivateRoute><Blog></Blog></PrivateRoute>
+            },
+            {
+                path:'/view_details/:id',
+                element:<View_Details></View_Details>,
+                loader:({params}) => fetch(`https://assignment-11-server-eight-eosin.vercel.app/allToys/${params.id}`)
             },
             {
                 path:'addToy',
