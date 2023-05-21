@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 .color{
-    background-color: #F2F2F2;
+    background-color: #F2F2F2; 
 }
 .color2{
     background-color: #25779C;

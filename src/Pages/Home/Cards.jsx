@@ -2,6 +2,7 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { Button, Card } from "flowbite-react";
 import { Link } from "react-router-dom";
+import noPicture from '../../images/Image_not_available.png'
 
 const Cards = ({ truck }) => {
     const {
@@ -15,7 +16,7 @@ const Cards = ({ truck }) => {
         <div>
             <Card
                 className="transform transition duration-500 hover:scale-110 color w-80 lg:w-full mx-auto"
-                imgSrc={picture}
+                imgSrc={picture ? picture : noPicture}
             >
                 <h2 className="lg:text-2xl color3">{name}</h2>
                 <p className="lg:text-lg"><span className="color3">Price: </span>${price}</p>
