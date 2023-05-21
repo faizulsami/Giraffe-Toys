@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -36,7 +36,7 @@ const AllToys = () => {
                                 Available Quantity
                             </th>
                             <th scope="col" className="px-6 py-3">
-
+                                
                             </th>
                         </tr>
                     </thead>
@@ -44,7 +44,7 @@ const AllToys = () => {
                         {
                             allToys.filter(item => {
                                 return search.toLowerCase() === '' ? item : item.name.toLowerCase().includes(search)
-                        }).map(toys => {
+                            }).map(toys => {
                                 const { sellerName, name, category, price, quantity, _id } = toys;
                                 return (
                                     <tr key={_id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -64,7 +64,7 @@ const AllToys = () => {
                                             {quantity}
                                         </td>
                                         <td className="px-6 py-4">
-
+                                        <button type="button" className="text-white color2 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 "><Link to={`/view_details/${_id}`}>View Details</Link></button>
                                         </td>
                                     </tr>
                                 )
