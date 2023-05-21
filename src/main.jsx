@@ -5,6 +5,9 @@ import { RouterProvider } from 'react-router-dom'
 import router from './Routes/Routes.jsx'
 import AuthProvider from './Provider/AuthProvider'
 import {HelmetProvider } from 'react-helmet-async';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+Aos.init();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className='font-custom'>

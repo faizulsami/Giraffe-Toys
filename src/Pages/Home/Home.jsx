@@ -62,17 +62,17 @@ const Home = () => {
             <div className=" lg:grid grid-cols-12 lg:gap-5 lg:mt-10 mt-3">
                 {/* 1st div */}
                 <div className="col-span-8 to-yellow-500">
-                    <img src={banner2} className='lg:rounded-3xl' />
+                    <img data-aos="zoom-out-right" src={banner2} className='lg:rounded-3xl' />
                 </div>
                 <div className="col-span-4 grid lg:gap-5">
                     {/* 2nd div */}
                     <div className='lg:ms-12'>
-                        <img src={banner1} className='lg:w-11/12 lg:rounded-2xl' />
+                        <img data-aos="zoom-out-left" src={banner1} className='lg:w-11/12 lg:rounded-2xl' />
                     </div>
                     {/* 3rd div */}
                     <div className="">
                         <div>
-                            <img src={banner3} className='lg:rounded-2xl' />
+                            <img data-aos="zoom-out-left" src={banner3} className='lg:rounded-2xl' />
                         </div>
                     </div>
                 </div>
@@ -198,46 +198,46 @@ const Home = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 lg:mt-10 w-96 mx-auto lg:w-full">
                 <div className="grid gap-4">
                     <div>
-                        <img className="h-auto max-w-full rounded-lg" src={pic1} />
+                        <img data-aos="zoom-out" className="h-auto max-w-full rounded-lg" src={pic1} />
                     </div>
                     <div>
-                        <img className="h-auto max-w-full rounded-lg" src={pic2} />
+                        <img data-aos="zoom-out" className="h-auto max-w-full rounded-lg" src={pic2} />
                     </div>
                     <div>
-                        <img className="h-auto max-w-full rounded-lg" src={pic3} />
-                    </div>
-                </div>
-                <div className="grid gap-4">
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src={pic4} />
-                    </div>
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src={pic5} />
-                    </div>
-                    <div>
-                        <img className="h-auto max-w-full rounded-lg" src={pic6} />
+                        <img data-aos="zoom-out" className="h-auto max-w-full rounded-lg" src={pic3} />
                     </div>
                 </div>
                 <div className="grid gap-4">
                     <div>
-                        <img className="h-auto max-w-full rounded-lg" src={pic7} />
+                        <img data-aos="zoom-out" className="h-auto max-w-full rounded-lg" src={pic4} />
                     </div>
                     <div>
-                        <img className="h-auto max-w-full rounded-lg" src={pic8} />
+                        <img data-aos="zoom-out" className="h-auto max-w-full rounded-lg" src={pic5} />
                     </div>
                     <div>
-                        <img className="h-auto max-w-full rounded-lg" src={pic9} />
+                        <img data-aos="zoom-out" className="h-auto max-w-full rounded-lg" src={pic6} />
                     </div>
                 </div>
                 <div className="grid gap-4">
                     <div>
-                        <img className="h-auto max-w-full rounded-lg" src={pic10} />
+                        <img data-aos="zoom-out" className="h-auto max-w-full rounded-lg" src={pic7} />
+                    </div>
+                    <div>
+                        <img data-aos="zoom-out" className="h-auto max-w-full rounded-lg" src={pic8} />
+                    </div>
+                    <div>
+                        <img data-aos="zoom-out" className="h-auto max-w-full rounded-lg" src={pic9} />
+                    </div>
+                </div>
+                <div className="grid gap-4">
+                    <div>
+                        <img data-aos="zoom-out" className="h-auto max-w-full rounded-lg" src={pic10} />
                     </div>
                     <div>
                         <img className="h-auto max-w-full rounded-lg" src={pic11} />
                     </div>
                     <div>
-                        <img className="h-auto max-w-full rounded-lg" src={pic12} />
+                        <img data-aos="zoom-out" className="h-auto max-w-full rounded-lg" src={pic12} />
                     </div>
                 </div>
             </div>

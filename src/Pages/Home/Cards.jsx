@@ -14,7 +14,7 @@ const Cards = ({ truck }) => {
     } = truck;
     return (
         <div>
-            <Card
+            <Card data-aos="zoom-out"
                 className="transform transition duration-500 hover:scale-110 color w-80 lg:w-full mx-auto"
                 imgSrc={picture ? picture : noPicture}
             >
