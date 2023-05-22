@@ -159,7 +159,7 @@ const Home = () => {
                 </div>
             </div>
             {/*Payment Details Section*/}
-            <div className="lg:flex ps-14  justify-around lg:mt-10 bg-primary py-20 pt-28 lg:rounded-3xl">
+            <div className="lg:flex ps-14 mx-auto justify-around mt-4 lg:mt-10 bg-primary py-20 pt-28 lg:rounded-3xl">
                 <div className="flex mb-8">
                     <div>
                         <h1 className='text-6xl text-[#FCE2AD] px-3'><AiOutlineWechat></AiOutlineWechat></h1>
