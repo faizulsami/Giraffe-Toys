@@ -1,14 +1,18 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import { Dropdown } from "flowbite-react";
+import { BsSortAlphaUpAlt , BsSortAlphaDownAlt } from 'react-icons/bs';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
+    const [remaining,setRemaining] = useState(true);
     const [myToys, setToys] = useState([]);
+    const [sort, setSort] = useState(1);
     useEffect(() => {
-        fetch(`https://assignment-11-server-eight-eosin.vercel.app/myToys?sellerEmail=${user?.email}`, {
+        fetch(`https://assignment-11-server-eight-eosin.vercel.app/myToys?sellerEmail=${user?.email}&sort=${sort}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
@@ -18,8 +22,9 @@ const MyToys = () => {
             .then(data => {
                 setToys(data);
             })
-    }, [user]);
+    }, [user,sort,remaining]);
     const handleDelete = id => {
+        
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -35,6 +40,7 @@ const MyToys = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
+                        setRemaining(!remaining);
                         if (data.deleteCount > 0) {
                             Swal.fire(
                                 'Deleted!',
@@ -51,7 +57,18 @@ const MyToys = () => {
             <Helmet>
                 <title>My Toys</title>
             </Helmet>
-            <div className="relative overflow-x-auto mt-5">
+            <div className="mt-4 flex justify-end">
+            <Dropdown className="color" label="Sort By">
+                <Dropdown.Item icon={BsSortAlphaUpAlt}>
+                <a onClick={() => setSort(1)}>Ascending</a>
+                </Dropdown.Item>
+                <Dropdown.Item icon={BsSortAlphaDownAlt}>
+                <a onClick={() => setSort(-1)}>Descending</a>
+                </Dropdown.Item>
+            </Dropdown>
+            </div>
+
+            <div className="relative overflow-x-auto mt-8">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase color4 dark:text-gray-400">
                         <tr>
