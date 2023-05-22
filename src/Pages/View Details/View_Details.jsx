@@ -1,4 +1,5 @@
 import CountUp from 'react-countup';
+import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from "react-router-dom";
 
 const View_Details = () => {
@@ -6,7 +7,10 @@ const View_Details = () => {
     const { picture, ratings, sellerName, sellerEmail, name, quantity, description, price } = details;
     return (
         <div className="container mx-auto">
-            <img className="w-full h-auto max-w-xl rounded-3xl lg:mt-8 mt-4 mx-auto" src={picture} alt="image description"/>
+            <Helmet>
+                <title>Update Toy</title>
+            </Helmet>
+            <img data-aos="zoom-out" className="w-full h-auto max-w-xl rounded-3xl lg:mt-8 mt-4 mx-auto" src={picture} alt="image description"/>
             <div className="mt-8 ms-3 lg:ms-0">
             <p className="lg:text-4xl color3">{sellerName}</p>
             <p className="lg:text-2xl">{sellerEmail}</p>

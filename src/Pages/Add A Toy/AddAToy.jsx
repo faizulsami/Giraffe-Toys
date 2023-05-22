@@ -59,7 +59,7 @@ const AddAToy = () => {
                                 <span className="label-text">Available Quantity</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="quantity" placeholder="Available Quantity" className="input input-bordered w-full" required />
+                                <input type="number" name="quantity" placeholder="Available Quantity" className="input input-bordered w-full" required />
                             </label>
                         </div>
                     </div>
@@ -119,7 +119,7 @@ const AddAToy = () => {
                                 <span className="label-text">Price</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" required />
+                                <input type="number" name="price" placeholder="Price" className="input input-bordered w-full" required />
                             </label>
                         </div>
                     </div>

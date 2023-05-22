@@ -10,6 +10,7 @@ import AddAToy from "../Pages/Add A Toy/AddAToy";
 import AllToys from "../Pages/All Toys/AllToys";
 import MyToys from "../Pages/My Toys/MyToys";
 import View_Details from "../Pages/View Details/View_Details";
+import UpdateToys from "../Pages/Update Toys/UpdateToys";
 
 const router = createBrowserRouter([
     {
@@ -26,17 +27,22 @@ const router = createBrowserRouter([
                 element:<PrivateRoute><Blog></Blog></PrivateRoute>
             },
             {
-                path:'/view_details/:id',
-                element:<View_Details></View_Details>,
+                path:'view_details/:id',
+                element:<PrivateRoute><View_Details></View_Details></PrivateRoute>,
+                loader:({params}) => fetch(`https://assignment-11-server-eight-eosin.vercel.app/allToys/${params.id}`)
+            },
+            {
+                path:'update/:id',
+                element:<UpdateToys></UpdateToys>,
                 loader:({params}) => fetch(`https://assignment-11-server-eight-eosin.vercel.app/allToys/${params.id}`)
             },
             {
                 path:'addToy',
-                element:<AddAToy></AddAToy>
+                element:<PrivateRoute><AddAToy></AddAToy></PrivateRoute>
             },
             {
                 path:'myToys',
-                element:<MyToys></MyToys>,
+                element:<PrivateRoute><MyToys></MyToys></PrivateRoute>,
                 loader: () => fetch('https://assignment-11-server-eight-eosin.vercel.app/myToys')
             },
             {
